@@ -1,11 +1,11 @@
 <div class="feature">
-    <h4 class="{{ inputFeatureData.quality }}">
+    <h3 class="{{ inputFeatureData.quality }}">
         <mat-icon class="icon {{ inputFeatureData.quality }}">radio_button_unchecked</mat-icon>
         {{ inputFeatureData.name }}
         <mat-icon *ngIf="inputFeatureData.quality == 'danger'" class="icon icon-right cancel-icon">cancel</mat-icon>
         <mat-icon *ngIf="inputFeatureData.quality == 'warning'" class="icon icon-right error-icon">error_outline</mat-icon>
         <mat-icon *ngIf="inputFeatureData.quality == 'success'" class="icon icon-right check-icon">check_circle_outline</mat-icon>
-    </h4>
+    </h3>
 
     <app-control [inputControlData]="inputFeatureData.controls" [maxControl]="maxShowControl" [featureType]="featureType"></app-control>
 
