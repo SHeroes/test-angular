@@ -4,9 +4,10 @@ Angular test example
 
 Pasos de instalación son:
 
-1- git clone https://github.com/SHeroes/angular-test.git
-2- entrar a la carpeta creada y ejecutar:  "npm install --save-dev @angular-devkit/build-angular"
-3- ng serve
+- git clone https://github.com/SHeroes/angular-test.git
+- entrar a la carpeta creada y ejecutar:  "npm install --save-dev @angular-devkit/build-angular"
+- ng serve
+
 
 Mejoras Posibles:
 
@@ -18,9 +19,9 @@ Mejoras Posibles:
 
 The Installation steps are:
 
-1- git clone https://github.com/SHeroes/angular-test.git
-2- enter the created folder and execute: "npm install --save-dev @angular-devkit/build-angular"
-3- ng serve
+- git clone https://github.com/SHeroes/angular-test.git
+- enter the created folder and execute: "npm install --save-dev @angular-devkit/build-angular"
+- ng serve
 
 Possible Improvements:
 
