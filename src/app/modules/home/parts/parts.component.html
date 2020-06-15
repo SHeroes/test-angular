@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <div class="ml-3">
+        <p>
+            <button class="btn btn-primary" (click)="startReadingParts()">
+            Reading Parts every 10 secs
+        </button>
+            <button class="btn btn-secondary ml-3" (click)="readNextPart()">
+            Read Next Part
+        </button>
+        </p>
+
+        <h1>Part: {{ part.name }}</h1>
+    </div>
+    <div class="row no-gutters feature">
+        <div class="col-lg-5 col-md-6 col-sm-12" *ngFor="let feature of featuresBig">
+            <app-feature [inputFeatureData]="feature" [maxShowControl]="this.maxElemBig" [featureType]="'big'"></app-feature>
+        </div>
+        <div class="col">
+            <div class="row no-gutters">
+                <div class="col-lg-8 col-md-12 col-sm-12">
+                    <div class="row no-gutters">
+                        <div class="col-lg-6 col-md-12" *ngFor="let feature of featuresSmall">
+                            <app-feature [inputFeatureData]="feature" [maxShowControl]="this.maxElemSmall" [featureType]="'small'"></app-feature>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="row no-gutters">
+                        <div class="col-12" *ngFor="let feature of featuresLarge">
+                            <app-feature [inputFeatureData]="feature" [maxShowControl]="this.maxElemLarge" [featureType]="'large'"></app-feature>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

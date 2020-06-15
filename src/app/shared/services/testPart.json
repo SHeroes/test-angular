@@ -1,0 +1,45 @@
+{
+    "name": "Part A",
+    "features": [{
+            "name": "Featurename=P",
+            "quality": "success",
+            "controls": [{
+                    "x": { "dev": 3, "quality": "warning" },
+                    "y": { "dev": 22, "quality": "success" },
+                    "z": { "dev": 123, "quality": "danger" },
+                    "diameter": { "dev": 123, "quality": "danger" }
+                },
+                {
+                    "x": { "dev": 3, "quality": "warning" },
+                    "y": { "dev": 22, "quality": "success" },
+                    "z": { "dev": 123, "quality": "danger" },
+                    "diameter": { "dev": 123, "quality": "danger" }
+                },
+                {
+                    "x": { "dev": 3, "quality": "warning" },
+                    "y": { "dev": 22, "quality": "success" },
+                    "z": { "dev": 123, "quality": "danger" },
+                    "diameter": { "dev": 123, "quality": "danger" }
+                }
+            ]
+        },
+        {
+            "name": "Feature Mas peque",
+            "quality": "success",
+            "controls": [{
+                    "x": { "dev": 3, "quality": "warning" },
+                    "y": { "dev": 22, "quality": "success" },
+                    "z": { "dev": 123, "quality": "danger" },
+                    "diameter": { "dev": 123, "quality": "danger" }
+                },
+                {
+                    "x": { "dev": 3, "quality": "warning" },
+                    "y": { "dev": 22, "quality": "success" },
+                    "z": { "dev": 123, "quality": "danger" },
+                    "diameter": { "dev": 123, "quality": "danger" }
+                }
+            ]
+        }
+
+    ]
+}

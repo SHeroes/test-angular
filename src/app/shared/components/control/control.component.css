@@ -1,0 +1,30 @@
+.icon {
+    font-size: 12px;
+    height: auto;
+    width: auto;
+}
+
+.check-icon {
+    color: green;
+}
+
+.cancel-icon {
+    color: darkred;
+}
+
+.error-icon {
+    color: #ebeb20;
+}
+
+.showMore-button {
+    color: black;
+    font-weight: 600;
+    background-color: #e3e3e3;
+    margin-bottom: 10px;
+    border-radius: 0px;
+    border: none;
+}
+
+table {
+    margin-bottom: 0px;
+}

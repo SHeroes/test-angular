@@ -1,0 +1,120 @@
+<div *ngIf="featureType=='big';then twoColumns else  simpleColumn"></div>
+
+<ng-template #twoColumns>
+    <div class="row no-gutters">
+        <div class="col-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Control</th>
+                        <th scope="col" class="text-center">Dev</th>
+                        <th scope="col" class="text-center">Dev Tot Out</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let ctrl of bigColumn1 ; index as i">
+                    <tr *ngIf="i<maxControl/2; else  showMore">
+                        <td>{{ ctrl.name }}</td>
+                        <td class="text-center">{{ ctrl.dev }}</td>
+                        <td class="text-center">{{ ctrl.devTot }}</td>
+                        <td>
+                            <mat-icon *ngIf="ctrl.quality == 'danger'" class="icon icon-right cancel-icon">cancel</mat-icon>
+                            <mat-icon *ngIf="ctrl.quality == 'warning'" class="icon icon-right error-icon">error_outline</mat-icon>
+                            <mat-icon *ngIf="ctrl.quality == 'success'" class="icon icon-right check-icon">check_circle_outline</mat-icon>
+                        </td>
+                    </tr>
+                    <ng-template #showMore>
+                        <tr class="expanded {{ this.toggleClass }}">
+                            <td>{{ ctrl.name }}</td>
+                            <td class="text-center">{{ ctrl.dev }}</td>
+                            <td class="text-center">{{ ctrl.devTot }}</td>
+                            <td>
+                                <mat-icon *ngIf="ctrl.quality == 'danger'" class="icon icon-right cancel-icon">cancel</mat-icon>
+                                <mat-icon *ngIf="ctrl.quality == 'warning'" class="icon icon-right error-icon">error_outline</mat-icon>
+                                <mat-icon *ngIf="ctrl.quality == 'success'" class="icon icon-right check-icon">check_circle_outline</mat-icon>
+                            </td>
+                        </tr>
+                    </ng-template>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Control</th>
+                        <th scope="col" class="text-center">Dev</th>
+                        <th scope="col" class="text-center">Dev Tot Out</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let ctrl of bigColumn2 ; index as i">
+                    <tr *ngIf="i<maxControl/2; else  showMore">
+                        <td>{{ ctrl.name }}</td>
+                        <td class="text-center">{{ ctrl.dev }}</td>
+                        <td class="text-center">{{ ctrl.devTot }}</td>
+                        <td>
+                            <mat-icon *ngIf="ctrl.quality == 'danger'" class="icon icon-right cancel-icon">cancel</mat-icon>
+                            <mat-icon *ngIf="ctrl.quality == 'warning'" class="icon icon-right error-icon">error_outline</mat-icon>
+                            <mat-icon *ngIf="ctrl.quality == 'success'" class="icon icon-right check-icon">check_circle_outline</mat-icon>
+                        </td>
+                    </tr>
+                    <ng-template #showMore>
+                        <tr class="expanded {{ this.toggleClass }}">
+                            <td>{{ ctrl.name }}</td>
+                            <td class="text-center">{{ ctrl.dev }}</td>
+                            <td class="text-center">{{ ctrl.devTot }}</td>
+                            <td>
+                                <mat-icon *ngIf="ctrl.quality == 'danger'" class="icon icon-right cancel-icon">cancel</mat-icon>
+                                <mat-icon *ngIf="ctrl.quality == 'warning'" class="icon icon-right error-icon">error_outline</mat-icon>
+                                <mat-icon *ngIf="ctrl.quality == 'success'" class="icon icon-right check-icon">check_circle_outline</mat-icon>
+                            </td>
+                        </tr>
+                    </ng-template>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</ng-template>
+
+
+<ng-template #simpleColumn>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Control</th>
+                <th scope="col" class="text-center">Dev</th>
+                <th scope="col" class="text-center">Dev Tot Out</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let ctrl of inputControlData ; index as i">
+            <tr *ngIf="i<maxControl; else  showMore">
+                <td>{{ ctrl.name }}</td>
+                <td class="text-center">{{ ctrl.dev }}</td>
+                <td class="text-center">{{ ctrl.devTot }}</td>
+                <td>
+                    <mat-icon *ngIf="ctrl.quality == 'danger'" class="icon icon-right cancel-icon">cancel</mat-icon>
+                    <mat-icon *ngIf="ctrl.quality == 'warning'" class="icon icon-right error-icon">error_outline</mat-icon>
+                    <mat-icon *ngIf="ctrl.quality == 'success'" class="icon icon-right check-icon">check_circle_outline</mat-icon>
+                </td>
+
+            </tr>
+            <ng-template #showMore>
+                <tr class="expanded {{ this.toggleClass }}">
+                    <td>{{ ctrl.name }}</td>
+                    <td class="text-center">{{ ctrl.dev }}</td>
+                    <td class="text-center">{{ ctrl.devTot }}</td>
+                    <td>
+                        <mat-icon *ngIf="ctrl.quality == 'danger'" class="icon icon-right cancel-icon">cancel</mat-icon>
+                        <mat-icon *ngIf="ctrl.quality == 'warning'" class="icon icon-right error-icon">error_outline</mat-icon>
+                        <mat-icon *ngIf="ctrl.quality == 'success'" class="icon icon-right check-icon">check_circle_outline</mat-icon>
+                    </td>
+                </tr>
+            </ng-template>
+        </tbody>
+    </table>
+</ng-template>
+
+
+<button class="btn btn-secondary d-block showMore-button p-2 w-100" (click)="showMoreClick()">&#9726;&#9726;&#9726;</button>
